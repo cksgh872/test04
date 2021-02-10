@@ -1,0 +1,97 @@
+-- github.com
+
+-- 저장소 만들기 --
+Repositories - > 저장소
+new ->   Repositories name : test 
+
+public -> 모르는사람도 접근 가능
+private -> 혼자서 저장공간으로 사용
+  
+저장공간에 대한 주소가 나옴 
+
+깃허브와 깃배쉬에서 만든걸 연동해야함!
+
+
+-- 연동해서 올리기 --
+
+git init  
+(연동하기) git bash - > git remote add origin 깃허브(test에대한)주소
+
+
+1. (add 했는지 확인하기!)
+2. (commit 한후 푸쉬하기) git commit -m "설명"
+3. git push -u origin master  깃허브에 올리기
+
+
+-- add,commit 한번에 하기(수정된 내용에 대해서만 한번에가능)
+git commit -am "33 새로운 내용추가 입니다!"
+
+
+-----------git bash 사용법----------------
+
+
+pwd 현재위치보기
+
+cd 현재위치 수정
+
+mkdir 현재위치 하위에 폴더 생성
+
+
+
+ls 현재위치에 있는 값(폴더)들을 보여줌
+
+git init  현재 폴더를 깃으로 관리해주세요! 
+(숨긴폴더로 git 폴더 하나생성됨)
+
+ls -a 
+(숨긴 목록 보여줌
+
+vim f1.txt    ( 이미 파일이 있다면 들어가기 )
+텍스트 만들기 (내용입력 i버튼, 뒤로 esc)
+: 치고 q 치면 나가기 w치면저장하기 (내용변경시 저장후 나가기)
+
+touch 파일명.txt < 
+
+cat f1.txt  해당하는 파일의 내용보기
+
+git status 현재 폴더 상태!
+
+git add f1.txt  <   f1 파일  깃으로 관리 
+git add --all  << 모든파일 깃으로
+
+
+git status   < 
+
+git config --global user.name  이름 확인
+ 
+git config --global user.name 여기에이름등록
+
+git config --global user.email cksgh872@naver.com 이메일 등록
+
+
+git commit 현재 시점등록하기 
+(i 누르고 제목(현시점설명))  -> esc -> : wq  
+
+git log --oneline  ( 기록보기 )
+
+cd ../../       (../ 하나당 한단계  전(폴더)으로 이동
+cd git_test/my_repos/    폴더명으로 들어가기
+
+
+Git Bash 를 Shift키 누르고 클릭하면 하나 더 켜짐
+
+
+vim .gitignore (배제하고 싶은 파일이나 폴더 이름) // add하기 전 파일만 가능
+ex) /aaa.txt   // 깃으로 관리되기 전 파일만 가능
+
+git rm --cached 파일명 add단계에서 파일빼기
+
+git branch 파일명   < 브런치 만들기
+
+git branch -d testbranch   < 브런치삭제
+
+git checkout testbranch    < 테스트 브런치로 이동햣
+
+git checkout master < 브런치에서 마스터로 이동
+
+git merhe testbranch < 브런치에서 한 작업을 마스터로
